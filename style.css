@@ -10,19 +10,21 @@ body{
 
 }
 .container{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow-x: none;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); 
-    color: aliceblue;
+    /* background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);  */
+    background-color: azure;
+    color: rgb(64, 121, 170);
 
 }
 .navcontainer{
     width: 100vw;
     /* background-color: rgb(105, 105, 176); */
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-color: #4d5c60;
+    background-image: linear-gradient(160deg, #4d5c60 52%, #80D0C7 100%);
+    
     
 
     min-height: 70px;
@@ -31,6 +33,7 @@ body{
 nav{
     width: 100%;
     overflow-x:none ;
+    padding-right: 2rem;
 }
 #navlist {
     /* margin-left: 15px; */
@@ -40,7 +43,7 @@ nav{
     list-style-type: none;
     font-size: 2.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 #navlogo{
@@ -56,10 +59,14 @@ a{
     gap: 40px;
 }
 .contentbox{
-    width:70%;
+    width:84%;
     margin:auto;
-    border: 1px solid black;
-
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3rem;
+    box-shadow: 0px 0px 30px black;
 
 }
 
@@ -73,4 +80,58 @@ a{
 .footerbox p{
     color: azure;
     font-size: 2rem;
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rightbox{
+    position: relative;
+    overflow: hidden;
+}
+.rightbox img{
+    border-radius: 20px;
+    transition: all 0.3s linear 0s;
+    /* box-shadow: 1px 1px 10px black;
+    border-radius: 20px; */
+}
+.rightbox:hover{
+    transform:scale(1.1) ;
+    transition: all 0.6s linear 0s;
+}
+.leftbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.leftbox h2{
+    font-size:2rem ;
+}
+.ingbox{
+    font-size: 1.3rem;
+}
+.recipebox{
+    font-size:1.1rem ;
+}
+.rightbox .overlay{
+    position:absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(97, 94, 94, 0.351);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.rightbox:hover .overlay{
+    opacity: 1;
+    transition: all 0.3s linear 0s;
+}
+.rightbox .overlay span{
+    color: white;
+    font-size: 1.2rem;
 }
